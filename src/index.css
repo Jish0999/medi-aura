@@ -1,0 +1,56 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@layer base {
+  body {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+    background-color: #000000;
+  }
+}
+
+.font-outfit {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Giant background stroke text */
+.text-stroke-faint {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.06);
+  color: transparent;
+}
+
+.text-stroke-cyan-glow {
+  -webkit-text-stroke: 1.5px rgba(0, 229, 255, 0.7);
+  color: transparent;
+}
+
+/* Custom glow effects */
+.glow-cyan {
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.25);
+}
+
+.glow-red {
+  box-shadow: 0 0 20px rgba(255, 59, 48, 0.3);
+}
+
+/* Pulse animation for heartbeat ECG line */
+@keyframes heartbeatGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 2px #00e5ff) drop-shadow(0 0 8px rgba(0, 229, 255, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 6px #00e5ff) drop-shadow(0 0 16px rgba(0, 229, 255, 0.8));
+  }
+}
+
+.animate-heartbeat {
+  animation: heartbeatGlow 2s ease-in-out infinite;
+}
+
+/* Dot grid matrix styling */
+.cyan-dot {
+  width: 3.5px;
+  height: 3.5px;
+  border-radius: 9999px;
+  background-color: #00e5ff;
+  box-shadow: 0 0 6px #00e5ff;
+}
